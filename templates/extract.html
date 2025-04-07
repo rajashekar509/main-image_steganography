@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Message</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Extract Message</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if extracted_message %}
+        <p style="color: green;">Extracted Message: {{ extracted_message }}</p>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+        <label>Stego Image:</label><input type="file" name="image_file" accept="image/png" required><br>
+        <label>Password:</label><input type="password" name="password" required><br>
+        <button type="submit">Extract</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

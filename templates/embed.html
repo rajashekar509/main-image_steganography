@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embed Message</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Embed Message</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+        <label>Image:</label><input type="file" name="image_file" accept="image/png" required><br>
+        <label>Secret Message:</label><input type="text" name="secret_message" required><br>
+        <label>Password:</label><input type="password" name="password" required><br>
+        <button type="submit">Embed</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>
