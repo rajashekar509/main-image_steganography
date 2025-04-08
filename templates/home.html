@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Steganography Tool</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <style>
+    h1,
+    p,
+    a {
+      color: white !important;
+    }
+  </style>
+
+  <body>
     <h1>Steganography Tool</h1>
     <p>Welcome, {{ session.user }}!</p>
-    <a href="/embed">Embed Message</a> | <a href="/extract">Extract Message</a> | <a href="/logout">Logout</a>
-</body>
+    <a href="/embed">Embed Message</a> |
+    <a href="/extract">Extract Message</a> |
+    <a href="/logout" style="color: red !important">Logout</a>
+  </body>
 </html>
